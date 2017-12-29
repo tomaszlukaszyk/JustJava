@@ -174,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
      * This method displays the given quantity value on the screen.
      */
     private void displayQuantity() {
-        quantityTextView.setText("" + quantity);
+        quantityTextView.setText(String.valueOf(quantity));
     }
 
     /**
