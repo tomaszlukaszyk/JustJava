@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textNormal">16sp</dimen>
+    <dimen name="outerFrame">16dp</dimen>
+    <dimen name="interline">16dp</dimen>
+    <dimen name="toppingsIndent">24dp</dimen>
+    <dimen name="quantityButtonsSize">48dp</dimen>
+    <dimen name="quantityNumberPadding">8dp</dimen>
+</resources>
