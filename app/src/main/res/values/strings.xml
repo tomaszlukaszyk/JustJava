@@ -5,19 +5,19 @@
     <string name="toppings">Toppings</string>
     <string name="whipped_cream">Whipped Cream</string>
     <string name="chocolate">Chocolate</string>
-    <string name="quantity">Quantity</string>
-    <string name="total_price">Total price</string>
-    <string name="starting_price">$10</string>
+    <string name="order_list">Order summary</string>
     <string name="order_button">Order</string>
     <string name="order_summary_email_subject">Just Java order from: <xliff:g id="name" example="Amy">%s</xliff:g></string>
     <string name="order_summary_name">Name: <xliff:g id="name" exaple="Amy">%s</xliff:g></string>
-    <string name="order_summary_whipped_cream">Add whipped cream? <xliff:g id="whippedCream" example="true">%s</xliff:g></string>
-    <string name="order_summary_chocolate">Add chocolate? <xliff:g id="chocolate" example="true">%s</xliff:g></string>
-    <string name="order_summary_quantity">Quantity: <xliff:g ig="quantity" exaple="2">%d</xliff:g></string>
-    <string name="order_summary_price">Total: <xliff:g ig="price" exaple="$10">%s</xliff:g></string>
     <string name="order_summary_thank_you">Thank you!</string>
-    <string name="too_few_toast">You can\'t have less than 1 coffee cup</string>
-    <string name="too_many_toast">You can\'t have more than 100 coffee cups"</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
+    <string name="too_few_toast">Pleas add some coffees first!</string>
+    <string name="too_many_toast">You can\'t order more than 50 coffee cups"</string>
+    <string name="plane_coffee">Coffee with no toppings ($5)</string>
+    <string name="coffee_cream">Coffee with Whipped Cream ($6)</string>
+    <string name="coffee_chocolate">Coffee with Chocolate ($7)</string>
+    <string name="coffee_all_toppings">Coffee with both topings ($8)</string>
+    <string name="total_zero">Total: $0</string>
+    <string name="total">Total: <xliff:g id="price" example="$10">%s</xliff:g></string>
+    <string name="add_coffee">+1 coffee</string>
+    <string name="sum">x <xliff:g id="quantity" example="1">%d</xliff:g> = <xliff:g id="price" example="$5">%s</xliff:g></string>
 </resources>

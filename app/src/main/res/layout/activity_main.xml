@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.adnroid.justjava.MainActivity" >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.adnroid.justjava.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="@dimen/outerFrame" >
+        android:padding="@dimen/outerFrame">
 
         <EditText
             android:id="@+id/name_input"
@@ -31,9 +31,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/interline"
+            android:onClick="whippedCreamChecked"
             android:paddingLeft="@dimen/toppingsIndent"
             android:text="@string/whipped_cream"
-            android:onClick="whippedCreamChecked"
             android:textSize="@dimen/textNormal" />
 
         <CheckBox
@@ -41,68 +41,192 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/interline"
+            android:onClick="chocolateChecked"
             android:paddingLeft="@dimen/toppingsIndent"
             android:text="@string/chocolate"
-            android:onClick="chocolateChecked"
             android:textSize="@dimen/textNormal" />
+
+        <Button
+            android:id="@+id/add_coffee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/interline"
+            android:onClick="addCoffee"
+            android:text="@string/add_coffee" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/interline"
-            android:text="@string/quantity"
+            android:layout_marginBottom="@dimen/interline_small"
+            android:text="@string/order_list"
             android:textAllCaps="true" />
 
-        <LinearLayout
+        <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
 
-            <Button
-                android:layout_width="@dimen/quantityButtonsSize"
-                android:layout_height="@dimen/quantityButtonsSize"
-                android:onClick="decrement"
-                android:text="-" />
+            <TableRow
+                android:id="@+id/plane_coffee_row"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/plane_coffee"
+                    android:textSize="@dimen/textSmall" />
+
+                <TextView
+                    android:id="@+id/plane_coffee_sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSmall" />
+
+                <Button
+                    android:id="@+id/plane_coffee_minus"
+                    android:layout_width="@dimen/quantityButtonsSize"
+                    android:layout_height="@dimen/quantityButtonsSize"
+                    android:layout_marginLeft="@dimen/quantityNumberPadding"
+                    android:onClick="planeCoffeeMinus"
+                    android:text="-" />
+
+                <Button
+                    android:id="@+id/plane_coffee_delete"
+                    android:layout_width="@dimen/quantityButtonsSize"
+                    android:layout_height="@dimen/quantityButtonsSize"
+                    android:layout_marginLeft="@dimen/quantityNumberPadding"
+                    android:onClick="planeCoffeeDelete"
+                    android:text="X" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/coffee_cream_row"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/coffee_cream"
+                    android:textSize="@dimen/textSmall" />
+
+                <TextView
+                    android:id="@+id/coffee_cream_sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSmall" />
+
+                <Button
+                    android:id="@+id/coffee_cream_minus"
+                    android:layout_width="@dimen/quantityButtonsSize"
+                    android:layout_height="@dimen/quantityButtonsSize"
+                    android:layout_marginLeft="@dimen/quantityNumberPadding"
+                    android:onClick="coffeeCreamMinus"
+                    android:text="-" />
+
+                <Button
+                    android:id="@+id/coffee_cream_delete"
+                    android:layout_width="@dimen/quantityButtonsSize"
+                    android:layout_height="@dimen/quantityButtonsSize"
+                    android:layout_marginLeft="@dimen/quantityNumberPadding"
+                    android:onClick="coffeeCreamDelete"
+                    android:text="X" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/coffee_chocolate_row"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1
+"
+                    android:text="@string/coffee_chocolate"
+                    android:textSize="@dimen/textSmall" />
+
+                <TextView
+                    android:id="@+id/coffee_chocolate_sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSmall" />
+
+                <Button
+                    android:id="@+id/coffee_chocolate_minus"
+                    android:layout_width="@dimen/quantityButtonsSize"
+                    android:layout_height="@dimen/quantityButtonsSize"
+                    android:layout_marginLeft="@dimen/quantityNumberPadding"
+                    android:onClick="coffeeChocolateMinus"
+                    android:text="-" />
+
+                <Button
+                    android:id="@+id/coffee_chocolate_delete"
+                    android:layout_width="@dimen/quantityButtonsSize"
+                    android:layout_height="@dimen/quantityButtonsSize"
+                    android:layout_marginLeft="@dimen/quantityNumberPadding"
+                    android:onClick="coffeeChocolateDelete"
+                    android:text="X" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/coffee_all_toppings_row"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/coffee_all_toppings"
+                    android:textSize="@dimen/textSmall" />
+
+                <TextView
+                    android:id="@+id/coffee_all_toppings_sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSmall" />
+
+                <Button
+                    android:id="@+id/coffee_all_toppings_minus"
+                    android:layout_width="@dimen/quantityButtonsSize"
+                    android:layout_height="@dimen/quantityButtonsSize"
+                    android:layout_marginLeft="@dimen/quantityNumberPadding"
+                    android:onClick="coffeeAllToppingsMinus"
+                    android:text="-" />
+
+                <Button
+                    android:id="@+id/coffee_all_toppings_delete"
+                    android:layout_width="@dimen/quantityButtonsSize"
+                    android:layout_height="@dimen/quantityButtonsSize"
+                    android:layout_marginLeft="@dimen/quantityNumberPadding"
+                    android:onClick="coffeeAllToppingsDelete"
+                    android:text="X" />
+
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/interline_small"
+                android:background="@android:color/darker_gray" />
 
             <TextView
-                android:id="@+id/quantity_text_view"
-                android:layout_width="wrap_content"
+                android:id="@+id/total"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/quantityNumberPadding"
-                android:paddingRight="@dimen/quantityNumberPadding"
-                android:text="2"
-                android:textColor="@color/textDark"
-                android:textSize="@dimen/textNormal" />
+                android:layout_marginTop="@dimen/interline_small"
+                android:text="@string/total_zero" />
 
-            <Button
-                android:layout_width="@dimen/quantityButtonsSize"
-                android:layout_height="@dimen/quantityButtonsSize"
-                android:onClick="increment"
-                android:text="+" />
 
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/interline"
-            android:layout_marginTop="@dimen/interline"
-            android:text="@string/total_price"
-            android:textAllCaps="true" />
-
-        <TextView
-            android:id="@+id/total_price_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/starting_price"
-            android:textColor="@color/textDark"
-            android:textSize="@dimen/textNormal" />
+        </TableLayout>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/interline"
             android:layout_marginBottom="@dimen/interline"
+            android:layout_marginTop="@dimen/interline"
             android:onClick="submitOrder"
             android:text="@string/order_button" />
 

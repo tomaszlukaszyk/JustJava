@@ -5,19 +5,19 @@
     <string name="toppings">Dodatki</string>
     <string name="whipped_cream">Bita śmietana</string>
     <string name="chocolate">Czekolada</string>
-    <string name="quantity">Ilość</string>
-    <string name="total_price">Cena końcowa</string>
-    <string name="starting_price">10,00 zł</string>
     <string name="order_button">Zamów</string>
     <string name="order_summary_email_subject">Tylko Java zamówienie od: <xliff:g id="name" example="Amy">%s</xliff:g></string>
     <string name="order_summary_name">Imię: <xliff:g id="name" exaple="Amy">%s</xliff:g></string>
-    <string name="order_summary_whipped_cream">Dodać bitą śmietanę? <xliff:g id="whippedCream" example="true">%s</xliff:g></string>
-    <string name="order_summary_chocolate">Dodać czekoladę? <xliff:g id="chocolate" example="true">%s</xliff:g></string>
-    <string name="order_summary_quantity">Ilość: <xliff:g ig="quantity" exaple="2">%d</xliff:g></string>
-    <string name="order_summary_price">Cena końcowa: <xliff:g ig="price" exaple="$10">%s</xliff:g></string>
     <string name="order_summary_thank_you">Dziękujemy!</string>
-    <string name="too_few_toast">Nie możesz zamówić mniej niż 1 kawa</string>
-    <string name="too_many_toast">Nie możesz zamówić więcej niż 100 kaw</string>
-    <string name="yes">Tak</string>
-    <string name="no">Nie</string>
+    <string name="order_list">Podsumowanie zamównienia</string>
+    <string name="too_few_toast">Najpierw dodaj do zamówienia jakąś kawę!</string>
+    <string name="too_many_toast">Nie możesz zamówić więcej niż 50 kaw</string>
+    <string name="plane_coffee">Kawa bez dodatków (5 zł)</string>
+    <string name="coffee_cream">Kawa z bitą śmietaną (6 zł)</string>
+    <string name="coffee_chocolate">Kawa z czekoladą (7 zł)</string>
+    <string name="coffee_all_toppings">Kawa z obydwoma dodatkami (8 zł)</string>
+    <string name="total_zero">Razem: 0 zł</string>
+    <string name="total">Razem: <xliff:g id="price" example="$10">%s</xliff:g></string>
+    <string name="add_coffee">+1 kawa</string>
+    <string name="sum">x <xliff:g id="quantity" example="1">%d</xliff:g> = <xliff:g id="price" example="$5">%s</xliff:g></string>
 </resources>
