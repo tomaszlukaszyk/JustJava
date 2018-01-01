@@ -293,7 +293,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(Intent.ACTION_SENDTO);
             intent.setData(Uri.parse("mailto:"));
             intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.order_summary_email_subject, name));
-            intent.putExtra(Intent.EXTRA_TEXT, createOrderSummary(name));
+            intent.putExtra(Intent.EXTRA_TEXT, createOrderSummary(name).toString());
             if (intent.resolveActivity(getPackageManager()) != null) {
                 startActivity(intent);
             }
@@ -308,28 +308,38 @@ public class MainActivity extends AppCompatActivity {
      * @param name of customer
      * @return order message
      */
-    private String createOrderSummary(String name) {
-        String priceMessage = getString(R.string.order_summary_name, name);
-        priceMessage += "\n";
+    private StringBuilder createOrderSummary(String name) {
+        StringBuilder priceMessage = new StringBuilder(getString(R.string.order_summary_name, name));
+        priceMessage.append("\n");
         if (planeCoffeeQuantity > 0) {
-            priceMessage += "\n" + getString(R.string.plane_coffee);
-            priceMessage += "\n" + getString(R.string.sum, planeCoffeeQuantity, NumberFormat.getCurrencyInstance().format(planeCoffeePrice));
+            priceMessage.append("\n");
+            priceMessage.append(getString(R.string.plane_coffee));
+            priceMessage.append("\n");
+            priceMessage.append(getString(R.string.sum, planeCoffeeQuantity, NumberFormat.getCurrencyInstance().format(planeCoffeePrice)));
         }
         if (coffeeCreamQuantity > 0) {
-            priceMessage += "\n" + getString(R.string.coffee_cream);
-            priceMessage += "\n" + getString(R.string.sum, coffeeCreamQuantity, NumberFormat.getCurrencyInstance().format(coffeeCreamPrice));
+            priceMessage.append("\n");
+            priceMessage.append(getString(R.string.coffee_cream));
+            priceMessage.append("\n");
+            priceMessage.append(getString(R.string.sum, coffeeCreamQuantity, NumberFormat.getCurrencyInstance().format(coffeeCreamPrice)));
         }
         if (coffeeChocolateQuantity > 0) {
-            priceMessage += "\n" + getString(R.string.coffee_chocolate);
-            priceMessage += "\n" + getString(R.string.sum, coffeeChocolateQuantity, NumberFormat.getCurrencyInstance().format(coffeeChocolatePrice));
+            priceMessage.append("\n");
+            priceMessage.append(getString(R.string.coffee_chocolate));
+            priceMessage.append("\n");
+            priceMessage.append(getString(R.string.sum, coffeeChocolateQuantity, NumberFormat.getCurrencyInstance().format(coffeeChocolatePrice)));
         }
         if (coffeeAllToppingsQuantity > 0) {
-            priceMessage += "\n" + getString(R.string.coffee_all_toppings);
-            priceMessage += "\n" + getString(R.string.sum, coffeeAllToppingsQuantity, NumberFormat.getCurrencyInstance().format(coffeeAllToppingsPrice));
+            priceMessage.append("\n");
+            priceMessage.append(getString(R.string.coffee_all_toppings));
+            priceMessage.append("\n");
+            priceMessage.append(getString(R.string.sum, coffeeAllToppingsQuantity, NumberFormat.getCurrencyInstance().format(coffeeAllToppingsPrice)));
         }
-        priceMessage += "\n";
-        priceMessage += "\n" + getString(R.string.total, NumberFormat.getCurrencyInstance().format(totalPrice));
-        priceMessage += "\n" + getString(R.string.order_summary_thank_you);
+        priceMessage.append("\n");
+        priceMessage.append("\n");
+        priceMessage.append(getString(R.string.total, NumberFormat.getCurrencyInstance().format(totalPrice)));
+        priceMessage.append("\n");
+        priceMessage.append(getString(R.string.order_summary_thank_you));
         return priceMessage;
     }
 
